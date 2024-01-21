@@ -1,0 +1,1020 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background: linear-gradient(#e5bdff 0 50%, #bbdafe 50% 100% );
+    margin: 24px;
+}
+
+main {
+    background-color: white;
+    padding: 24px;
+}
+
+/*
+main, #header-cv, section, #moocs ul, #skills ul, li, address {
+    border: 2px solid red;
+}
+*/
+
+section {
+    margin: 56px auto;
+}
+
+h1, h2 {
+    font-family: Montserrat, sans-serif;
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 600;
+    margin: 16px 0;
+    line-height: 1em;
+}
+
+h1 span {
+    text-transform: uppercase; 
+    font-weight: 900;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px; /* Remplace 32px */
+}
+
+h2 span {
+    font-weight: 400;
+}
+
+ol {
+    padding-inline-start: 0;
+}
+
+ol, ul {
+    list-style-type: none;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+li {
+    margin-top: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ------------ HEADER CV ------------ */
+
+#header-cv {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#header-cv > div img {
+    display: block;
+    width: 275px;
+    margin: auto;
+}
+
+#header-cv #identity { /* > div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 16px 24px;
+    width: 243px;
+}
+
+#header-cv div .rafters {
+    width: 124px;
+    height: 100px;
+    background-image: url(images/rafters.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0;
+}
+
+#professional-project h2 {
+    text-transform: none;
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: 474px;
+}
+
+#header-cv h2:nth-child(2) {
+    text-transform: none;
+    margin-left: 16px; 
+    margin-right: 16px;
+} 
+
+#header-cv p {
+    margin: 0 16px 40px;
+    max-width: 474px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: justify;
+    /* color: #505050;*/
+}
+
+
+/* ----------- CONTACT ------------ */
+
+address {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    column-gap: 16px;
+    margin: 0 auto;
+}
+
+address div {
+    display: flex;
+    flex-direction: column;
+}
+
+address span:first-child {
+    padding-top: 0;
+}
+
+address span, address a {
+    display: block;
+    text-decoration: none;
+    padding-top: 8px;
+    padding-right: 8px;
+    font-style: normal;
+    color: #000000;
+    font-weight: 300;
+    /*color: #505050;*/
+    transition: .2s;
+}
+
+address a:hover {
+    font-weight: 500;
+}
+
+address span::before, address a::before {
+    content: '';
+    background-size: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    padding-right: 32px;
+    padding-top: 4px;
+}
+
+.mobility {
+    white-space: nowrap;
+}
+
+.home::before {
+    background-image: url(images/home-black.svg);
+}
+
+.mobility::before {
+    background-image: url(images/mobility.svg);
+    background-size: 20px;
+}
+
+.github::before {
+    background-image: url(images/github.svg);
+    background-size: 18px;
+}
+
+.linkedin::before {
+    background-image: url(images/linkedin.svg);
+    background-size: 16px;
+    padding-top: 3px;
+}
+
+.email::before {
+    background-image: url(images/email.svg);
+    background-size: 14px;
+    padding-top: 0;
+}
+
+.phone::before {
+    background-image: url(images/phone-call.svg);
+    padding-top: 2px;
+}
+
+/* ----------- COMPETENCES ------------ */
+
+#languages-and-softwares {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 40px;
+    column-gap: 24px;
+    width: fit-content;
+    margin-bottom: 32px;
+}
+
+#languages-and-softwares div {
+    display: flex;
+    gap: 24px; /* Mettre éventuellement 48 aussi, à vérifier */ 
+}
+
+#languages-and-softwares img {
+    width: 48px;
+}
+
+#languages-and-softwares li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ----------- COMPETENCES ------------ */
+
+#skills ul, #moocs ol {
+    margin: 0 24px;
+}
+
+#skills li, #moocs li, #diplomas .principal, #experiences li {
+    padding-top: 8px;
+    /*padding-bottom: 8px; Car top imp sur les compétences */
+    margin-bottom: 8px;
+    margin-left: 28px;
+    position: relative;
+}
+
+#skills h2 {
+    margin-bottom: 24px;
+}
+
+
+#skills .no-projects::before, label::before, #moocs ul > li::before /*, #moocs ol li::before */, #diplomas .principal::before, #experiences li::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url(images/horizontal-black-line.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 10px;
+    left: -26px;
+}
+
+main #skills span {
+    display: inline;
+}
+
+#skills ul > li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* --------- MOOCS ----------- */
+
+#moocs li {
+    list-style-type: none;
+    margin-left: 0;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px; /* Remplace 16px */
+    padding: 0;
+}
+
+#moocs ul {
+    margin-left: 56px; /* Remplace 52px */
+    margin-right: 24px;
+}
+
+#moocs ul > li::before {
+    background-image: url(images/substract.svg);
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    left: -35px;
+}
+
+#moocs .mooc-title {
+    /* display: list-item; /* Sinon les puces ne s'affichent pas
+    list-style-type: disc; */
+    margin-right: -24px;
+    margin-left: -2px; /* Remplace -8px */
+    /*font-size: .9em;*/
+    font-weight: 400;
+}
+
+/*
+.in-progress {
+    font-weight: 300;
+    font-size: .9em;
+}
+*/
+#moocs .mooc-title::before {
+    top: 2px;
+}
+
+
+#moocs ol li:first-child {
+    margin-top: 12px;
+}
+
+#moocs ol li:last-child {
+    margin-bottom: 24px;
+}
+
+hr {
+    display: none;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(#e5bdff 0 50%, #bbdafe 50% 100% );
+    border: 1px solid transparent;
+}
+
+/* ------------- COMPETENCES ------------- */
+
+#languages-and-softwares li {
+    margin-top: 0;
+}
+
+#header-cv h2, #moocs h2, #experiences h2 {
+    margin-bottom: 32px; /* 24px */
+}
+
+#skills .see-projects {
+    display: none;
+    flex-direction: column;
+    margin-top: 4px;
+}
+
+#skills .see-projects li {
+    margin: 0;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.see-projects li::before, #moocs ol li::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url(images/horizontal-purple-line.svg); /* Changer l'image de puce */
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 10px;
+    left: -26px;
+}
+
+
+#moocs ol li::before {
+    background-image: url(images/horizontal-black-line.svg);
+}
+
+.see-projects a {
+    display: block;
+    color: #000000;
+    font-weight: 400;
+    /*font-size: .9em;
+    opacity: .9;*/
+}
+
+input {
+    display: none;
+}
+
+label {
+    transition: .2s;
+}
+
+label:hover {
+    font-weight: 500;
+}
+
+label::before {
+    width: 24px;
+    height: 24px;
+    background-image: url(images/plus.svg);
+    top: 6px;
+    left: -30px;
+    transition: transform .2s;
+}
+
+#skills input:checked + label::before {
+    transform: rotate(45deg);
+}
+
+#skills input:checked ~ .see-projects {
+    display: flex;
+}
+
+#diplomas .principal::before, #experiences li::before {
+    background-image: url(images/horizontal-blue-line.svg);
+}
+
+.diploma-title, .experience-title {
+    font-weight: 500; 
+}
+
+/*.in-progress,*/ .establishment, .period, .comments {
+    font-weight: 300;
+    /*font-size: .9em;
+    color: #505050;*/
+}
+
+.diploma-title, .experience-title, .establishment, .period, .comments {
+    display: block;
+    margin-bottom: 4px;
+}
+/*
+.diploma-title, .experience-title {
+    margin-bottom: 4px;
+}
+*/
+
+/* ----------- FORMATIONS ----------- */
+
+#diplomas h2 {
+    margin-bottom: 24px;
+}
+
+#tp {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: disc;
+    margin-left: -12px;
+    margin-right: 0;
+    /*margin-top: 16px; Trop grand */
+    position: relative;
+}
+
+#tp::before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #bbdafe, #e5bdff);
+    position: absolute;
+    top: 62.5px;
+}
+
+#tp li {
+    list-style-type: none;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+#tp li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 25%;
+    height: 56px;
+    gap: 20px;
+}
+
+#tp li:first-child {
+    gap: 16px;
+}
+#tp .validated {
+    text-align: center;
+}
+
+#tp span {
+    font-size: .9em;
+}
+
+#tp img {
+    width: 12px;
+    margin-bottom: 2px;
+}
+
+#tp .validated + img {
+    width: 18px;
+    margin-bottom: 0px;
+    animation: grow-turn 2s infinite;
+}
+
+@keyframes grow-turn {        
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ---------- Expériences ------------- */
+
+#experiences h2 {
+    margin-bottom: 24px;
+    line-height: 29px;
+}
+
+#diplomas ol > li:last-child, #experiences ol > li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#diplomas ol > li:last-child, #experiences ol span:last-child {
+    margin-bottom: 0;
+}
+
+/* ----------- Hobbies ------------ */
+
+
+#hobbies h2 {
+    line-height: 29px;
+}
+
+#hobbies .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin: 0 24px;
+}
+
+#hobbies figure {
+    border: 3px solid #e5bdff;
+    border-radius: 100%;
+    padding: 16px;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    /*
+    margin-top: 16px;
+    margin-bottom: 16px;
+    */
+}
+
+/*
+#hobbies figure:nth-child(2) {
+    margin-top: 0;
+}
+*/
+
+#hobbies img {
+    width: 42px;
+}
+
+#hobbies figcaption {
+    font-size: 12px;
+    text-align: center;
+}
+
+#hobbies, #hobbies:last-child {
+    margin-bottom: 8px;
+}
+
+#diplomas h2, #languages-and-skills h2, #moocs h2, #hobbies h2, #experiences h2 {
+    width: fit-content;
+    max-width: 215px;
+    white-space: pre-wrap;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#languages-and-skills h2 span, #moocs h2 span, #diplomas h2 span, #experiences h2 span, #hobbies h2 span {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(images/parachute.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -8px;
+    left: -56px;
+    animation: up-down 6s infinite;
+}
+
+#hobbies h2 span {
+    background-image: url(images/parachute.svg); 
+    left: 8px;
+}
+
+
+@keyframes up-down {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-24px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#languages-and-skills h2 span {
+    background-image: url(images/hammer.svg);
+    animation: strike 2s infinite;
+}
+
+@keyframes strike {
+    0% {
+        transform: rotateZ(30deg);
+    }
+
+    50% {
+        transform: rotateZ(-45deg);
+    }
+
+    100% {
+        transform: rotateZ(30deg);
+    }
+}
+
+#moocs h2 span {
+    background-image: url(images/cog.svg);
+    animation: turn 3s linear infinite;
+}
+
+@keyframes turn {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#diplomas h2 span {
+    background-image: url(images/diploma.svg);
+    animation: move 3s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(45deg);
+    }
+    50% {
+        transform: rotateY(0deg);
+    }
+
+    75% {
+        transform: rotateY(-45deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+#experiences h2 span {
+    background-image: url(images/suitcase.svg);
+    left: -24px;
+    animation: side 3s linear infinite;
+}
+
+@keyframes side {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(8px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.download {
+    width: fit-content;
+    height: fit-content;
+    padding: 16px;
+    background: linear-gradient(#e5bdff, #bbdafe);
+    border-radius: 4px;
+    margin: 56px auto 32px;
+}
+
+.download a {
+    color: black;
+}
+
+.download.desktop-appears, .download.tablet-appears {
+    display: none;
+    
+}
+
+
+/*
+@media screen and (min-width: 600px) {
+    
+    main {
+        display: flex;
+        flex-direction: column;
+}
+    
+    aside {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    } 
+}
+*/
+
+
+
+@media screen and (min-width: 579px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    address {
+        flex-direction: row;
+    }
+
+    address div :first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #languages-and-skills, #skills, #moocs, #diplomas, #experiences, #hobbies {
+        max-width: 506px;
+    }
+
+    #diplomas h2, #languages-and-skills h2, #moocs h2, #hobbies h2, #experiences h2 {
+        max-width: 250px;
+    }
+
+    .establishment, .period, .comments {
+        display: inline;
+    }
+
+    #hobbies h2 span {
+        left: -56px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    #header-cv {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #header-cv > div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 40%;
+    }
+
+    #identity {
+        width: 50%;
+        margin: auto;
+    }
+
+    #professional-project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 40px;
+    }
+
+    #header-cv > div:nth-child(2) {
+        /* margin-top: 32px; */
+        display: flex;
+        flex-direction: column-reverse;
+        
+        /* flex-direction: row-reverse; */
+        align-items: center;
+        justify-content: space-around;
+        width: 60%;
+    }
+
+    #header-cv > div:nth-child(2) > h2 {
+        margin-top: 40px;
+        text-transform: none;
+    }
+    
+    #header-cv h2 {
+        margin-top: 16px;
+    }
+    #header-cv p {
+        margin: 0 auto 16px;
+        width: 100%;
+    }
+
+    #contact {
+        /* width: 275px; */
+        margin: auto;
+    }
+
+    #contact address {
+        flex-wrap: wrap;
+        margin-left: 16px;
+        margin-right: 16px;
+        justify-content: center;
+    }
+
+    address div :first-child {
+        padding-top: 8px;
+    }
+
+    address div {
+        width: 240px;
+    }
+    /*
+    main > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;  
+    }
+    */
+
+    /*#languages-skills-moocs, #diplomas-experiences-hobbies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin-right: 32px;
+        margin-left: 32px;
+    }
+    */
+    section {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #languages-and-softwares img {
+        width: 48px;
+    }
+
+    #languages-and-softwares {
+        gap: 24px;
+    }
+    
+    #languages-and-softwares div {
+        gap: 24px;
+    }
+
+
+    /*.diploma-title, .experience-title,*/ .establishment, .period, .comments {
+        display: inline;
+    }
+    
+    #all-parts {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "languages-and-skills diplomas"
+        "moocs experiences"
+        "hobbies hobbies";
+    }
+
+    #moocs {
+        grid-area: moocs;
+    }
+
+    #diplomas {
+        grid-area: diplomas;
+    }
+    
+    #hobbies {
+        grid-area: hobbies;
+    }
+
+    #experiences {
+        grid-area: experiences;
+    }
+    */
+
+    #languages-and-skills {
+        grid-area: languages-and-skills;
+    }
+
+    #moocs li:last-child {
+        margin-bottom: 8px;
+    }
+
+    section {
+        margin: 40px auto 0;
+    }
+
+   .download.phone-appears {
+        display: none;
+    }
+
+    .download.tablet-appears {
+        display: block;
+        margin: 0 auto 64px;
+    }
+}
+
+
+@media screen and (min-width: 1170px) {
+
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #all-parts {
+        width: 70%;
+    }
+
+    #header-cv {
+        margin: 0 auto;
+        width: 26%;
+        flex-direction: column;
+        align-items: center;
+        min-width: 275px;
+    }
+
+    #header-cv > div img {
+        margin: 0;
+    }
+
+    #contact {
+        margin: 0;
+    }
+
+    address {
+        flex-direction: column;
+    }
+
+    #header-cv > div:nth-child(2) {
+        width: fit-content;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    section {
+        margin: 56px auto 0;
+    }
+    
+    #languages-and-skills, #diplomas {
+        margin-top: 16px;
+    }
+
+    section {
+        margin-left: 32px;
+        margin-right: 32px; 
+    }
+
+    #hobbies {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .download.tablet-appears {
+        display: none;
+    }
+
+    .download.desktop-appears {
+        display: block;
+        margin: 32px auto 32px;
+    }
+
+}
